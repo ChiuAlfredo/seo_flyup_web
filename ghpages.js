@@ -1,7 +1,12 @@
 // place at : deploy/ghpages.js
 // you can see more info at https://github.com/tschaub/gh-pages
-const path = require('path');
-const ghpages = require('gh-pages');
+import path from 'path';
+import ghpages from 'gh-pages';
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 const options = {
     branch: 'gh-pages',
@@ -19,4 +24,4 @@ const callback = err => {
 };
 
 // Use the project root directory to find the dist folder
-ghpages.publish(path.resolve(__dirname, '../dist'), options, callback);
+ghpages.publish(path.resolve(__dirname, './dist'), options, callback);

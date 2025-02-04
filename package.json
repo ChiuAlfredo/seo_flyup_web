@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "vite build",
     "predeploy": "vite build",
-    "deploy": "node ghpages.js",
+    "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup",
     "preview": "vite preview"
   },
   "dependencies": {
@@ -22,6 +22,7 @@
     "autoprefixer": "^10.4.17",
     "gh-pages": "^6.3.0",
     "postcss": "^8.4.33",
+    "push-dir": "^0.4.1",
     "tailwindcss": "^3.4.1",
     "vite": "^5.0.12"
   }
