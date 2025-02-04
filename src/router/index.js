@@ -1,12 +1,14 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
       path: '/',
       name: 'root',
-      redirect: '/home'  // 將根路徑重定向到 /home
+      redirect: to => {
+        return { path: '/home' }
+      }
     },
     {
       path: '/home',
