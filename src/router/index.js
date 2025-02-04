@@ -6,7 +6,7 @@ const router = createRouter({
     {
       path: '/',
       name: 'root',
-      redirect: 'home'  // 將根路徑重定向到 /home
+      redirect: '/home'  // 將根路徑重定向到 /home
     },
     {
       path: '/home',
