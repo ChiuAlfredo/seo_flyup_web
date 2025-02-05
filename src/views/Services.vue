@@ -52,12 +52,12 @@ const services = ref([
               {{ service.description }}
             </p>
             <div class="mt-6">
-              <a href="/contact" class="inline-flex items-center text-indigo-600 hover:text-indigo-500">
+              <router-link :to="`/services/${service.title === 'SEO 優化' ? 'seo' : service.title === '網站開發' ? 'web-development' : service.title === '數位行銷' ? 'digital-marketing' : 'system-integration'}` " class="inline-flex items-center text-indigo-600 hover:text-indigo-500">
                 了解更多
                 <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
                 </svg>
-              </a>
+              </router-link>
             </div>
           </div>
         </div>
@@ -76,5 +76,6 @@ const services = ref([
         </div>
       </div>
     </div>
+    <router-view></router-view>
   </div>
 </template>

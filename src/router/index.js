@@ -27,6 +27,26 @@ const router = createRouter({
       component: () => import('../views/Services.vue')
     },
     {
+      path: '/services/seo',
+      name: 'seo',
+      component: () => import('../views/services/Seo.vue')
+    },
+    {
+      path: '/services/web-development',
+      name: 'web-development',
+      component: () => import('../views/services/WebDevelopment.vue')
+    },
+    {
+      path: '/services/digital-marketing',
+      name: 'digital-marketing',
+      component: () => import('../views/services/DigitalMarketing.vue')
+    },
+    {
+      path: '/services/system-integration',
+      name: 'system-integration',
+      component: () => import('../views/services/SystemIntegration.vue')
+    },
+    {
       path: '/contact',
       name: 'contact',
       component: () => import('../views/Contact.vue')
