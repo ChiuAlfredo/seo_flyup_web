@@ -17,7 +17,7 @@ const toggleMenu = () => {
         <div class="flex justify-between h-16">
           <div class="flex">
             <div class="flex-shrink-0 flex items-center">
-              <RouterLink to="/home" class="text-xl font-bold text-indigo-600">Company</RouterLink>
+              <RouterLink to="/home" class="text-xl font-bold text-indigo-600">確克</RouterLink>
             </div>
             <div class="hidden sm:ml-6 sm:flex sm:space-x-8">
               <RouterLink to="/home" class="inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-900" active-class="border-b-2 border-indigo-500 text-indigo-600">首頁</RouterLink>
@@ -26,9 +26,10 @@ const toggleMenu = () => {
               <RouterLink to="/contact" class="inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-900" active-class="border-b-2 border-indigo-500">聯絡我們</RouterLink>
             </div>
           </div>
+
           <div class="-mr-2 flex items-center sm:hidden">
             <button @click="toggleMenu" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
-              <span class="sr-only">Open main menu</span>
+              <span class="sr-only">開啟選單</span>
               <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path v-if="!isMenuOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
                 <path v-else stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
@@ -58,7 +59,7 @@ const toggleMenu = () => {
     <footer class="bg-white">
       <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 md:flex md:items-center md:justify-between lg:px-8">
         <div class="mt-8 md:mt-0">
-          <p class="text-center text-base text-gray-400">&copy; 2024 Company. All rights reserved.</p>
+          <p class="text-center text-base text-gray-400">&copy; 2025 確克行銷整合有限公司. 版權所有.</p>
         </div>
       </div>
     </footer>

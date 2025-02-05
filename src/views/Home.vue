@@ -3,18 +3,18 @@ import { ref } from 'vue';
 
 const features = ref([
   {
-    title: '工程師直做',
-    description: '由專業工程師團隊執行，深入了解搜尋引擎技術層面。',
+    title: '工程師直營',
+    description: '由專業工程師團隊提供一條龍服務，提供全方位搜尋引擎技術解析，協助您掌握市場趨勢。',
     icon: '💻'
   },
   {
-    title: '120天保證',
-    description: '120天不達標全額退費，讓您的投資零風險。',
+    title: '實戰成效保證',
+    description: '我們以先進技術為後盾，承諾交付實際成效，讓您只對有價值的服務買單。',
     icon: '✅'
   },
   {
-    title: '透明報告',
-    description: '定期提供詳細的排名和流量報告，讓您掌握最新進度。',
+    title: '數據全公開',
+    description: '我們定期發布精細化的排名與流量報告，讓您第一時間掌握網站動態與成效數據。',
     icon: '📊'
   }
 ]);
@@ -45,34 +45,50 @@ const services = ref([
 const faqs = ref([
   {
     question: 'SEO 見效速度要多久？',
-    answer: '一般來說，3-4個月內可以看到明顯的排名提升，但具體時間會因關鍵字競爭度而異。'
+    answer: '一般來說，3-4個月內才能看到明顯的排名提升，但具體時間會因關鍵字競爭度與市場環境而有所不同。'
   },
   {
-    question: '排名能否保證一定穩定在前幾名？',
-    answer: 'SEO排名會因競爭度與演算法更新而有所波動，但我們會持續優化以維持穩定排名。'
+    question: '如何監控和評估 SEO 成效？',
+    answer: '我們提供定期且詳細的報告，涵蓋網站流量、關鍵字排名等指標，協助您隨時掌握成效。'
   },
   {
-    question: '若120天內沒達標，如何退費？',
-    answer: '若未達到約定的排名目標，我們將全額退還您的投資，過程簡單透明。'
+    question: 'SEO 優化需要投入多少預算？',
+    answer: '預算會根據您的行業、競爭狀況以及具體優化需求而定，我們會根據個案提供量身定制的方案與報價。'
   },
   {
-    question: '中途想終止合作怎麼辦？',
-    answer: '我們提供彈性的合作方案，可隨時討論調整或終止合作。'
+    question: '網站是否需要重新設計才能進行 SEO 優化？',
+    answer: '並非必須，但一個結構合理、內容豐富的網站更有助於 SEO 效果。我們會根據現有網站狀況提出相應的改進建議。'
+  },
+  {
+    question: 'SEO 優化後如何保持長期成效？',
+    answer: 'SEO 是一個持續優化的過程，我們建議定期更新內容、調整策略並密切關注搜索引擎演算法變化，以確保長期成效。'
+  },
+  {
+    question: '如果效果不佳，是否有退款保障？',
+    answer: '我們對服務效果充滿信心，並提供效果保證政策；若達不到預期效果，將依具體條款進行調整或補救。'
   }
 ]);
 
 const testimonials = ref([
   {
-    name: '王小明',
-    company: '電商平台',
-    content: '透過SEO優化後，我們的網站流量增加了300%，轉換率也明顯提升。',
-    position: '營運長'
+    company: '知名服飾品牌',
+    content: '在合作初期，我們針對網站結構、內容優化與外部連結進行了全方位調整。隨著策略的逐步推行，網站訪問量穩步上升，各關鍵指標均達到預期目標，進一步提升了品牌曝光與用戶互動。',
+    position: '主理人'
   },
   {
-    name: '李美玲',
-    company: '教育機構',
-    content: '專業的團隊、即時的回應，讓我們在短時間內就看到了成效。',
-    position: '行銷總監'
+    company: '某教育機構',
+    content: '我們為客戶量身訂製了一系列SEO優化方案，從關鍵字規劃到內容調整，持續追蹤數據變化。結果顯示，重點課程頁面的曝光率大幅改善，招生成效也隨之顯現，讓整體行銷策略更具說服力。',
+    position: '行銷長'
+  },
+  {
+    company: '知名寵物美容',
+    content: '我們與客戶密切合作，針對市場動態及用戶行為進行數據監控。經過數輪優化後，網站流量與用戶互動均呈現穩健增長，進一步鞏固了品牌在國際市場上的競爭力。',
+    position: '創辦人'
+  },
+  {
+    company: '知名酒商',
+    content: '在深入了解客戶需求後，我們從網站結構、內容品質及外部推廣等多角度入手，實現了搜索排名的穩定提升。持續的數據追蹤與策略調整，讓整體效益逐步顯現，為客戶帶來長期價值。',
+    position: '市場主管'
   }
 ]);
 </script>
@@ -84,8 +100,8 @@ const testimonials = ref([
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center">
           <h1 class="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
-            <span class="block">4個月快速衝高您的網站排名</span>
-            <span class="block text-indigo-600">120天不達標全額退費！</span>
+            <span class="block">穩步提升網站排名</span>
+            <span class="block text-indigo-600">不達標全額退費！</span>
           </h1>
           <p class="mt-3 max-w-md mx-auto text-base text-gray-500 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
             工程師直做 + 透明報告 + 全程保證，讓您輕鬆擁有穩定流量。
@@ -180,10 +196,10 @@ const testimonials = ref([
 
         <div class="mt-10">
           <div class="grid grid-cols-1 gap-8 sm:grid-cols-2">
-            <div v-for="testimonial in testimonials" :key="testimonial.name" class="bg-gray-50 p-6 rounded-lg shadow">
+            <div v-for="testimonial in testimonials" :key="testimonial.company" class="bg-gray-50 p-6 rounded-lg shadow">
               <p class="text-gray-600 italic">"{{ testimonial.content }}"</p>
               <div class="mt-4">
-                <p class="font-medium text-gray-900">{{ testimonial.name }}</p>
+                <!-- <p class="font-medium text-gray-900">{{ testimonial.name }}</p> -->
                 <p class="text-gray-500">{{ testimonial.position }} - {{ testimonial.company }}</p>
               </div>
             </div>

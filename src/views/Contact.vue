@@ -1,5 +1,6 @@
 <script setup>
 import { ref } from 'vue';
+import emailjs from '@emailjs/browser';
 
 const form = ref({
   name: '',
@@ -8,9 +9,48 @@ const form = ref({
   message: ''
 });
 
-const handleSubmit = () => {
-  // Here you can implement the form submission logic
-  console.log('Form submitted:', form.value);
+const isSubmitting = ref(false);
+const submitStatus = ref({ success: false, message: '' });
+
+const handleSubmit = async () => {
+  isSubmitting.value = true;
+  submitStatus.value = { success: false, message: '' };
+
+  try {
+    await emailjs.send(
+      'service_4rhl6dm', // Replace with your EmailJS service ID
+      'template_3vjurbm', // Replace with your EmailJS template ID
+      {
+        to_email: 'petercy32@gmail.com',
+        from_name: form.value.name,
+        from_email: form.value.email,
+        phone: form.value.phone,
+        message: form.value.message
+      },
+      'FPdj02WkwEtmTld54' // Replace with your EmailJS public key
+    );
+
+    submitStatus.value = {
+      success: true,
+      message: '訊息已成功送出！我們將盡快與您聯繫。'
+    };
+    
+    // Reset form after successful submission
+    form.value = {
+      name: '',
+      email: '',
+      phone: '',
+      message: ''
+    };
+  } catch (error) {
+    submitStatus.value = {
+      success: false,
+      message: '抱歉，訊息傳送失敗。請稍後再試。'
+    };
+    console.error('Email sending failed:', error);
+  } finally {
+    isSubmitting.value = false;
+  }
 };
 </script>
 
@@ -84,16 +124,25 @@ const handleSubmit = () => {
             <div>
               <button
                 type="submit"
+                :disabled="isSubmitting"
                 class="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
               >
-                送出訊息
+                {{ isSubmitting ? '傳送中...' : '送出訊息' }}
               </button>
+            </div>
+
+            <!-- Status Message -->
+            <div v-if="submitStatus.message" class="mt-4 p-4 rounded-md" :class="{
+              'bg-green-50 text-green-800': submitStatus.success,
+              'bg-red-50 text-red-800': !submitStatus.success
+            }">
+              {{ submitStatus.message }}
             </div>
           </form>
         </div>
 
         <!-- Contact Information -->
-        <div class="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-2">
+        <div class="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-3">
           <div class="flex items-center">
             <div class="flex-shrink-0">
               <svg class="h-6 w-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -102,7 +151,7 @@ const handleSubmit = () => {
             </div>
             <div class="ml-3">
               <p class="text-lg font-medium text-gray-900">電話諮詢</p>
-              <p class="mt-1 text-gray-500">週一至週五 9:00-18:00</p>
+              <p class="mt-1 text-gray-500">0966-680-565</p>
             </div>
           </div>
 
@@ -114,7 +163,19 @@ const handleSubmit = () => {
             </div>
             <div class="ml-3">
               <p class="text-lg font-medium text-gray-900">電子郵件</p>
-              <p class="mt-1 text-gray-500">我們將在24小時內回覆</p>
+              <p class="mt-1 text-gray-500">petercy32@gmail.com</p>
+            </div>
+          </div>
+
+          <div class="flex items-center">
+            <div class="flex-shrink-0">
+              <svg class="h-6 w-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+              </svg>
+            </div>
+            <div class="ml-3">
+              <p class="text-lg font-medium text-gray-900">LINE</p>
+              <p class="mt-1 text-gray-500">peter4101</p>
             </div>
           </div>
         </div>
