@@ -2,7 +2,7 @@
   <div class="min-h-screen bg-gray-50">
     <div class="relative mb-16 py-12 bg-white shadow-lg">
       <div class="absolute inset-0 overflow-hidden">
-        <img src="/src/assets/s2(3).jpg" alt="Background" class="w-full h-full object-cover opacity-40">
+        <img src="/src/assets/s2(3).jpg" alt="Background" class="w-full h-full object-cover opacity-40" loading="lazy" width="1920" height="1080" decoding="async">
       </div>
       
       <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -19,12 +19,12 @@
     </div>
 
     <!-- 我們的故事 -->
-    <div class="mt-16 max-w-6xl mx-auto">
+    <div class="mt-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="bg-white rounded-lg shadow-lg overflow-hidden">
         <div class="grid grid-cols-1 lg:grid-cols-2">
           <!-- Image Content -->
           <div class="relative order-first lg:order-last">
-            <img src="/src/assets/screen_2x.jpg" alt="Our Story" class="w-full h-full object-cover">
+            <img src="/src/assets/screen_2x.jpg" alt="Our Story" class="w-full h-full object-cover" loading="lazy" width="1920" height="1080" decoding="async">
           </div>
           <!-- Text Content -->
           <div class="space-y-6 text-left text-gray-500 p-8">
@@ -49,7 +49,7 @@
         <div class="grid grid-cols-1 lg:grid-cols-2">
           <!-- Image Content -->
           <div class="relative order-first">
-            <img src="/src/assets/s2 (4).jpg" alt="Our Service Commitment" class="w-full h-full object-cover">
+            <img src="/src/assets/s2 (4).jpg" alt="Our Service Commitment" class="w-full h-full object-cover" loading="lazy" width="1920" height="1080" decoding="async">
           </div>
           <!-- Text Content -->
           <div class="space-y-6 text-left text-gray-500 p-8">
@@ -87,7 +87,9 @@
         <div class="grid grid-cols-1 lg:grid-cols-2">
           <!-- Image Content -->
           <div class="relative order-first lg:order-last">
-            <img src="/src/assets/s.jpg" alt="Our Advantages" class="w-full h-full object-cover">
+            <div class="relative w-full h-full">
+              <img src="/src/assets/s2(4).png" alt="About Us" class="w-full h-full object-cover rounded-lg shadow-lg" loading="lazy" decoding="async" width="1920" height="1080">
+            </div>
           </div>
           <!-- Text Content -->
           <div class="space-y-6 text-left text-gray-500 p-8">

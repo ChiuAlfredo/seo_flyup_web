@@ -27,7 +27,7 @@ const hideServicesDropdown = () => {
           <div class="flex items-center">
             <div class="flex-shrink-0">
               <RouterLink to="/home" class="text-xl font-bold text-indigo-600">
-                <img src="/src/assets/logo.png" alt="確克" class="object-contain h-14">
+                <img src="/src/assets/logo.png" alt="確克" class="object-contain h-14" loading="lazy" width="200" height="56" decoding="async">
               </RouterLink>
             </div>
             <div class="hidden sm:ml-8 sm:flex sm:items-center sm:space-x-8">

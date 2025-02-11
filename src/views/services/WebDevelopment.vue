@@ -27,7 +27,7 @@ const features = ref([
 
 <template>
   <div class="min-h-screen py-16 bg-gray-50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
       <!-- Hero Section -->
       <div class="text-center">
         <h1 class="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
@@ -41,17 +41,13 @@ const features = ref([
 
       <!-- Features Section -->
       <div class="mt-20">
-        <div class="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-2">
-          <div v-for="feature in features" :key="feature.title" class="relative bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-            <div class="flex items-center mb-6">
-              <div class="flex-shrink-0">
-                <span class="text-4xl">{{ feature.icon }}</span>
-              </div>
-              <h3 class="ml-4 text-2xl font-bold text-gray-900">{{ feature.title }}</h3>
+        <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
+          <div v-for="feature in features" :key="feature.title" class="bg-gray-50 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+            <div class="flex items-center mb-4">
+              <span class="text-3xl mr-3">{{ feature.icon }}</span>
+              <h3 class="text-xl font-bold text-gray-900">{{ feature.title }}</h3>
             </div>
-            <p class="text-gray-500 text-lg">
-              {{ feature.description }}
-            </p>
+            <p class="text-gray-600">{{ feature.description }}</p>
           </div>
         </div>
       </div>

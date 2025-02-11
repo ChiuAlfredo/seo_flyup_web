@@ -72,7 +72,7 @@ const testimonials = ref([
 const faqs = ref([
   {
     question: 'SEO 見效速度要多久？',
-    answer: '一般來說，3-4個月內才能看到明顯的排名提升，但具體時間會因關鍵字競爭度與市場環境而有所不同。'
+    answer: '一般來說，3-4個月內能夠看到明顯的排名提升，但具體時間會因關鍵字競爭度與市場環境而有所不同。'
   },
   {
     question: '如何監控和評估 SEO 成效？',
@@ -192,7 +192,7 @@ const toggleFeature = (index) => {
 
       <!-- Hero Section -->
       <div class="absolute inset-0 overflow-hidden">
-        <img src="../../assets/s2(4).png" alt="Background" class="w-full h-full object-cover opacity-40">
+        <img src="../../assets/s2(4).png" alt="Background" class="w-full h-full object-cover opacity-40" loading="lazy" width="1920" height="1080" decoding="async" style="min-height: 400px">
       </div>
 
 

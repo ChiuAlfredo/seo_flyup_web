@@ -70,8 +70,8 @@ const testimonials = ref([
   <div class="min-h-screen">
     <!-- Hero Section -->
     <div class="bg-gray-50 py-24 relative">
-      <div class="absolute inset-0 z-0 overflow-hidden">
-        <img src="../assets/s2 (1).jpg" alt="Background" class="w-full h-full object-cover opacity-50">
+      <div class="absolute inset-0 z-0 overflow-hidden" style="min-height: 400px">
+        <img src="/src/assets/s2 (1).jpg" alt="Background" class="w-full h-full object-cover opacity-50" loading="lazy" decoding="async" width="1920" height="1080" style="min-height: 400px">
       </div>
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div class="text-center bg-white bg-opacity-90 rounded-xl py-3 px-5 shadow-lg mx-auto max-w-3xl">
