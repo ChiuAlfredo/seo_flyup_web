@@ -22,11 +22,13 @@ const hideServicesDropdown = () => {
   <div class="min-h-screen bg-gray-50">
     <!-- Navigation -->
     <nav class="bg-white shadow">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-7xl mx-auto px-0 sm:px-6 lg:px-1">
         <div class="flex justify-between h-16">
           <div class="flex items-center">
             <div class="flex-shrink-0">
-              <RouterLink to="/home" class="text-xl font-bold text-indigo-600">確克</RouterLink>
+              <RouterLink to="/home" class="text-xl font-bold text-indigo-600">
+                <img src="/src/assets/logo.png" alt="確克" class="object-contain h-14">
+              </RouterLink>
             </div>
             <div class="hidden sm:ml-8 sm:flex sm:items-center sm:space-x-8">
               <RouterLink to="/home" class="inline-flex items-center px-3 py-2 text-sm font-medium text-gray-900 hover:text-indigo-600 border-b-2 border-transparent hover:border-indigo-600" active-class="text-indigo-600 border-indigo-600">首頁</RouterLink>

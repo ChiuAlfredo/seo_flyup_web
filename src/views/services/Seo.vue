@@ -309,17 +309,17 @@ const toggleFeature = (index) => {
         <div class="grid grid-cols-1 gap-10">
           <div v-for="(feature, index) in features" 
                :key="feature.title" 
-               class="relative bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-            <div class="flex items-center mb-6 cursor-pointer" @click="toggleFeature(index)">
+               class="relative bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 cursor-pointer"
+               @click="toggleFeature(index)">
+            <div class="flex items-center mb-6">
               <div class="flex-shrink-0">
                 <span class="text-4xl">{{ feature.icon }}</span>
               </div>
               <h3 class="ml-4 text-2xl font-bold text-gray-900">{{ feature.title }}</h3>
               <div class="ml-auto">
-                <span class="text-2xl transition-transform duration-300" 
-                      :class="{ 'rotate-180': expandedFeature === index }">
-                  ▼
-                </span>
+                <svg class="w-6 h-6 transition-transform duration-300" :class="{ 'rotate-180': expandedFeature === index }" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
               </div>
             </div>
             <p class="text-gray-500 text-lg mb-4">
