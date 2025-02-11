@@ -65,16 +65,16 @@ const hideServicesDropdown = () => {
       <!-- Mobile menu -->
       <div v-show="isMenuOpen" class="sm:hidden">
         <div class="pt-2 pb-3 space-y-1">
-          <RouterLink to="/home" class="block px-4 py-2 text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50" active-class="text-indigo-600 bg-indigo-50">首頁</RouterLink>
-          <RouterLink to="/about" class="block px-4 py-2 text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50" active-class="text-indigo-600 bg-indigo-50">關於我們</RouterLink>
+          <RouterLink to="/home" @click="isMenuOpen = false" class="block px-4 py-2 text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50" active-class="text-indigo-600 bg-indigo-50">首頁</RouterLink>
+          <RouterLink to="/about" @click="isMenuOpen = false" class="block px-4 py-2 text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50" active-class="text-indigo-600 bg-indigo-50">關於我們</RouterLink>
           <div class="space-y-1">
-            <RouterLink to="/services" class="block px-4 py-2 text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50" active-class="text-indigo-600 bg-indigo-50">服務項目</RouterLink>
-            <RouterLink to="/services/seo" class="block pl-8 pr-4 py-2 text-sm font-medium text-gray-600 hover:text-indigo-600 hover:bg-gray-50">SEO 優化</RouterLink>
+            <RouterLink to="/services" @click="isMenuOpen = false" class="block px-4 py-2 text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50" active-class="text-indigo-600 bg-indigo-50">服務項目</RouterLink>
+            <RouterLink to="/services/seo" @click="isMenuOpen = false" class="block pl-8 pr-4 py-2 text-sm font-medium text-gray-600 hover:text-indigo-600 hover:bg-gray-50">SEO 優化</RouterLink>
             <span class="block pl-8 pr-4 py-2 text-sm font-medium text-gray-400">網站開發</span>
             <span class="block pl-8 pr-4 py-2 text-sm font-medium text-gray-400">數位行銷</span>
             <span class="block pl-8 pr-4 py-2 text-sm font-medium text-gray-400">系統整合</span>
           </div>
-          <RouterLink to="/contact" class="block px-4 py-2 text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50" active-class="text-indigo-600 bg-indigo-50">聯絡我們</RouterLink>
+          <RouterLink to="/contact" @click="isMenuOpen = false" class="block px-4 py-2 text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50" active-class="text-indigo-600 bg-indigo-50">聯絡我們</RouterLink>
         </div>
       </div>
     </nav>
