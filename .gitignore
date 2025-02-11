@@ -23,3 +23,9 @@ dist
 *.njsproj
 *.sln
 *.sw?
+src/assets/*.png
+src/assets/*.jpg
+src/assets/*.jpeg
+src/assets/*.gif
+src/assets/*.svg
+src/assets/*.webp
