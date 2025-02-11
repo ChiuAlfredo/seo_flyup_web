@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-screen py-16 bg-gray-50">
+  <div class="min-h-screen bg-gray-50">
     <div class="relative mb-16 py-12 bg-white shadow-lg">
       <div class="absolute inset-0 overflow-hidden">
         <img src="../assets/s2(3).jpg" alt="Background" class="w-full h-full object-cover opacity-40">
@@ -114,10 +114,7 @@
               </div>
             </div>
           </div>
-          <!-- Image Content -->
-          <div class="relative">
-            <img src="../assets/s.jpg" alt="Our Advantages" class="w-full h-full object-cover">
-          </div>
+         
         </div>
       </div>
     </div>

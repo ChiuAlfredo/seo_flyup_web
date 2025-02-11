@@ -186,7 +186,7 @@ const toggleFeature = (index) => {
 </script>
 
 <template>
-  <div class="min-h-screen py-16 bg-gray-50">
+  <div class="min-h-screen bg-gray-50">
     <div class="relative mb-16 py-12 bg-white shadow-lg">
      
 
