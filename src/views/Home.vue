@@ -42,33 +42,6 @@ const services = ref([
   }
 ]);
 
-const faqs = ref([
-  {
-    question: 'SEO 見效速度要多久？',
-    answer: '一般來說，3-4個月內才能看到明顯的排名提升，但具體時間會因關鍵字競爭度與市場環境而有所不同。'
-  },
-  {
-    question: '如何監控和評估 SEO 成效？',
-    answer: '我們提供定期且詳細的報告，涵蓋網站流量、關鍵字排名等指標，協助您隨時掌握成效。'
-  },
-  {
-    question: 'SEO 優化需要投入多少預算？',
-    answer: '預算會根據您的行業、競爭狀況以及具體優化需求而定，我們會根據個案提供量身定制的方案與報價。'
-  },
-  {
-    question: '網站是否需要重新設計才能進行 SEO 優化？',
-    answer: '並非必須，但一個結構合理、內容豐富的網站更有助於 SEO 效果。我們會根據現有網站狀況提出相應的改進建議。'
-  },
-  {
-    question: 'SEO 優化後如何保持長期成效？',
-    answer: 'SEO 是一個持續優化的過程，我們建議定期更新內容、調整策略並密切關注搜索引擎演算法變化，以確保長期成效。'
-  },
-  {
-    question: '如果效果不佳，是否有退款保障？',
-    answer: '我們對服務效果充滿信心，並提供效果保證政策；若達不到預期效果，將依具體條款進行調整或補救。'
-  }
-]);
-
 const testimonials = ref([
   {
     company: '知名服飾品牌',
@@ -113,7 +86,7 @@ const testimonials = ref([
               </RouterLink>
             </div>
             <div class="mt-3 rounded-md shadow sm:mt-0 sm:ml-3">
-              <RouterLink to="/services/seo" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-indigo-600 bg-white hover:bg-gray-50 md:py-4 md:text-lg md:px-10">
+              <RouterLink to="/services/seo" @click="() => window.scrollTo(0, 0)" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-indigo-600 bg-white hover:bg-gray-50 md:py-4 md:text-lg md:px-10">
                 了解服務內容
               </RouterLink>
             </div>
@@ -199,7 +172,6 @@ const testimonials = ref([
             <div v-for="testimonial in testimonials" :key="testimonial.company" class="bg-gray-50 p-6 rounded-lg shadow">
               <p class="text-gray-600 italic">"{{ testimonial.content }}"</p>
               <div class="mt-4">
-                <!-- <p class="font-medium text-gray-900">{{ testimonial.name }}</p> -->
                 <p class="text-gray-500">{{ testimonial.position }} - {{ testimonial.company }}</p>
               </div>
             </div>
@@ -208,41 +180,22 @@ const testimonials = ref([
       </div>
     </div>
 
-    <!-- FAQ Section -->
-    <div class="py-12 bg-gray-50">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="lg:text-center">
-          <h2 class="text-base text-indigo-600 font-semibold tracking-wide uppercase">常見問題</h2>
-          <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-            您想了解的都在這裡
-          </p>
-        </div>
-
-        <div class="mt-10">
-          <div class="space-y-6">
-            <div v-for="faq in faqs" :key="faq.question" class="bg-white p-6 rounded-lg shadow">
-              <h3 class="text-lg font-medium text-gray-900">{{ faq.question }}</h3>
-              <p class="mt-2 text-base text-gray-500">{{ faq.answer }}</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Final CTA Section -->
-    <div class="py-12 bg-indigo-700">
+    <!-- CTA Section -->
+    <div class="py-16 bg-white">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center">
-          <h2 class="text-3xl font-extrabold text-white sm:text-4xl">
-            準備好提升您的網站排名了嗎？
-          </h2>
-          <p class="mt-4 text-xl text-indigo-100">
-            立即預約免費諮詢，獲得專業的SEO診斷建議。
-          </p>
-          <div class="mt-8">
-            <RouterLink to="/contact" class="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-indigo-700 bg-white hover:bg-indigo-50 md:py-4 md:text-lg md:px-10">
-              立即聯繫我們
-            </RouterLink>
+          <h2 class="text-3xl font-bold text-gray-900 mb-8">免費SEO評估，今天開始提升您的網站！</h2>
+          <div class="mt-5 max-w-md mx-auto sm:flex sm:justify-center md:mt-8">
+            <div class="rounded-md shadow">
+              <RouterLink to="/contact" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10">
+                立即免費諮詢
+              </RouterLink>
+            </div>
+            <div class="mt-3 rounded-md shadow sm:mt-0 sm:ml-3">
+              <RouterLink to="/services/seo" @click="() => window.scrollTo(0, 0)" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-indigo-600 bg-white hover:bg-gray-50 md:py-4 md:text-lg md:px-10">
+                了解服務內容
+              </RouterLink>
+            </div>
           </div>
         </div>
       </div>

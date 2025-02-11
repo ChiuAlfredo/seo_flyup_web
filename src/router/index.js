@@ -1,6 +1,13 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
 const router = createRouter({
+  scrollBehavior(to, from, savedPosition) {
+    if (savedPosition) {
+      return savedPosition
+    } else {
+      return { top: 0, behavior: 'smooth' }
+    }
+  },
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
