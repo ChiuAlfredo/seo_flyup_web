@@ -69,14 +69,17 @@ const testimonials = ref([
 <template>
   <div class="min-h-screen">
     <!-- Hero Section -->
-    <div class="bg-gray-50 py-24">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center">
+    <div class="bg-gray-50 py-24 relative">
+      <div class="absolute inset-0 z-0 overflow-hidden">
+        <img src="../assets/s2 (1).jpg" alt="Background" class="w-full h-full object-cover opacity-50">
+      </div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="text-center bg-white bg-opacity-90 rounded-xl py-3 px-5 shadow-lg mx-auto max-w-3xl">
           <h1 class="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
             <span class="block">穩步提升網站排名</span>
             <span class="block text-indigo-600">不達標全額退費！</span>
           </h1>
-          <p class="mt-3 max-w-md mx-auto text-base text-gray-500 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
+          <p class="mt-3 max-w-md mx-auto text-base text-gray-700 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
             工程師直做 + 透明報告 + 全程保證，讓您輕鬆擁有穩定流量。
           </p>
           <div class="mt-5 max-w-md mx-auto sm:flex sm:justify-center md:mt-8">

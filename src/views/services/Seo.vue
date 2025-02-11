@@ -187,22 +187,30 @@ const toggleFeature = (index) => {
 
 <template>
   <div class="min-h-screen py-16 bg-gray-50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="relative mb-16 py-12 bg-white shadow-lg">
      
 
       <!-- Hero Section -->
-      <div class="text-center">
-        <h1 class="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
-          <span class="block">專業的</span>
-          <span class="block text-indigo-600">SEO 優化服務</span>
-        </h1>
-        <p class="mt-3 max-w-md mx-auto text-base text-gray-500 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
-          運用最新的SEO技術與策略，幫助您的網站在搜尋引擎中脫穎而出。我們的專業團隊將為您提供全方位的SEO優化服務，從技術層面到內容策略，確保您的網站能夠獲得更好的排名與持續增長的有效流量。
-        </p>
+      <div class="absolute inset-0 overflow-hidden">
+        <img src="../../assets/s2(4).png" alt="Background" class="w-full h-full object-cover opacity-40">
       </div>
 
+
+      <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="lg:text-center">
+          <h2 class="text-base text-indigo-600 font-semibold tracking-wide uppercase">專業的</h2>
+          <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+            SEO 優化服務
+          </p>
+          <p class="mt-4 max-w-2xl text-xl text-gray-700 lg:mx-auto">
+            運用最新的SEO技術與策略，幫助您的網站在搜尋引擎中脫穎而出。
+          </p>
+        </div>
+      </div>
+    </div>
+
        <!-- Why SEO Section -->
-       <div class="mt-20">
+       <div class="mt-16 max-w-6xl mx-auto">
         <div class="lg:text-center mb-12">
           <h2 class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">為什麼您的網站需要 SEO 優化？</h2>
             
@@ -249,7 +257,7 @@ const toggleFeature = (index) => {
       </div> -->
 
       <!-- Performance Metrics Section -->
-      <div class="mt-20">
+      <div class="mt-16 max-w-6xl mx-auto">
         <div class="lg:text-center mb-12">
           <h2 class="text-base text-indigo-600 font-semibold tracking-wide uppercase">SEO 優化效益</h2>
           <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
@@ -291,7 +299,7 @@ const toggleFeature = (index) => {
       </div>
 
       <!-- Features Section -->
-      <div class="mt-20">
+      <div class="mt-16 max-w-6xl mx-auto">
         <div class="lg:text-center mb-12">
           <h3 class="text-2xl font-bold text-gray-900 sm:text-3xl">我們的SEO服務內容</h3>
           <p class="mt-4 max-w-2xl mx-auto text-xl text-gray-500">
@@ -330,8 +338,44 @@ const toggleFeature = (index) => {
         </div>
       </div>
 
-      <!-- CTA Section -->
-      <div class="mt-20">
+     
+
+      <!-- Testimonials Section -->
+      <div class="mt-16 max-w-6xl mx-auto">
+        <div class="lg:text-center mb-12">
+          <h2 class="text-base text-indigo-600 font-semibold tracking-wide uppercase">客戶見證</h2>
+          <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+            真實成功案例
+          </p>
+        </div>
+        <div class="grid grid-cols-1 gap-8 sm:grid-cols-2">
+          <div v-for="testimonial in testimonials" :key="testimonial.company" class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+            <p class="text-gray-600 italic">"{{ testimonial.content }}"</p>
+            <div class="mt-4">
+              <p class="text-gray-500">{{ testimonial.position }} - {{ testimonial.company }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ Section -->
+      <div class="mt-16 max-w-6xl mx-auto">
+        <div class="lg:text-center mb-12">
+          <h2 class="text-base text-indigo-600 font-semibold tracking-wide uppercase">常見問題</h2>
+          <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+            了解更多關於 SEO 優化
+          </p>
+        </div>
+        <div class="space-y-8">
+          <div v-for="faq in faqs" :key="faq.question" class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+            <h3 class="text-lg font-medium text-gray-900">{{ faq.question }}</h3>
+            <p class="mt-2 text-gray-500">{{ faq.answer }}</p>
+          </div>
+        </div>
+      </div>
+
+       <!-- CTA Section -->
+       <div class="mt-16 max-w-6xl mx-auto">
         <div class="bg-indigo-600 rounded-lg shadow-xl overflow-hidden">
           <div class="px-6 py-12 max-w-7xl mx-auto sm:px-12 lg:px-16 lg:py-16">
             <div class="lg:grid lg:grid-cols-2 lg:gap-8 lg:items-center">
@@ -354,41 +398,6 @@ const toggleFeature = (index) => {
           </div>
         </div>
       </div>
-
-      <!-- Testimonials Section -->
-      <div class="mt-20">
-        <div class="lg:text-center mb-12">
-          <h2 class="text-base text-indigo-600 font-semibold tracking-wide uppercase">客戶見證</h2>
-          <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-            真實成功案例
-          </p>
-        </div>
-        <div class="grid grid-cols-1 gap-8 sm:grid-cols-2">
-          <div v-for="testimonial in testimonials" :key="testimonial.company" class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-            <p class="text-gray-600 italic">"{{ testimonial.content }}"</p>
-            <div class="mt-4">
-              <p class="text-gray-500">{{ testimonial.position }} - {{ testimonial.company }}</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- FAQ Section -->
-      <div class="mt-20">
-        <div class="lg:text-center mb-12">
-          <h2 class="text-base text-indigo-600 font-semibold tracking-wide uppercase">常見問題</h2>
-          <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-            了解更多關於 SEO 優化
-          </p>
-        </div>
-        <div class="space-y-8">
-          <div v-for="faq in faqs" :key="faq.question" class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-            <h3 class="text-lg font-medium text-gray-900">{{ faq.question }}</h3>
-            <p class="mt-2 text-gray-500">{{ faq.answer }}</p>
-          </div>
-        </div>
-      </div>
-
+      
     </div>
-  </div>
 </template>
