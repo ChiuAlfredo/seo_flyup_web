@@ -23,8 +23,7 @@
     "autoprefixer": "^10.4.17",
     "gh-pages": "^6.3.0",
     "postcss": "^8.4.33",
-    "push-dir": "^0.4.1",
     "tailwindcss": "^3.4.1",
-    "vite": "^5.0.12"
+    "vite": "^5.4.14"
   }
 }

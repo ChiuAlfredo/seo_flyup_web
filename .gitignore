@@ -28,4 +28,8 @@ src/assets/*.jpg
 src/assets/*.jpeg
 src/assets/*.gif
 src/assets/*.svg
+<<<<<<< HEAD
 src/assets/*.webp
+=======
+src/assets/*.webp
+>>>>>>> d8e92b985801b38460f2441ce016ff195be66149
